@@ -1,4 +1,6 @@
 # Revive an outdated C.H.I.P. from factory OS to Debian Buster
+This guide and scripts are based on the excelent work made by https://github.com/Thore-Krug/Flash-CHIP and the guide in https://gist.github.com/luzhuomi/526fbcc30f3522f09eacf20d0f776fa5
+
 ## Part 1: Flashing stock C.H.I.P. image
 
 Ready to use Flash environment for the C.H.I.P Single Board Computer
@@ -26,9 +28,14 @@ Simplyfies the Flashing Process for the C.H.I.P and PocketC.H.I.P Computer.
 6. run `sudo nmtui` to set-up a wifi connection to <YOUR SSID>
 7. run `sudo nmcli c` to show your current connections
 8. run `sudo nmcli c m <YOUR SSID> connection.autoconnect yes` to set autoconnection to <YOUR SSID> wifi in case of trouble
-9. run `sudo su -` to allow all the next changes as superuser
-10. run `curl -o https://raw.githubusercontent.com/asophila/Flash-CHIP/master/CHIP-updater/jessie-to-stretch.sh | bash` to update from Debian Jessie to Debian Stretch
     
+### Part 3: upgrade debian jessie to debian stretch
+1. run `sudo su -` to allow all the next changes as superuser
+2. run `curl -o https://raw.githubusercontent.com/asophila/Flash-CHIP/master/CHIP-updater/jessie-to-stretch.sh | bash` to update from Debian Jessie to Debian Stretch
+3. reboot C.H.I.P. into Debian Stretch
+
+
+
     
     
   
@@ -53,6 +60,4 @@ make install-all install-misc
 cd ../
 ./Flash.sh
 ```
-## Support my work by Donating 
 
-https://www.paypal.me/a13tech
