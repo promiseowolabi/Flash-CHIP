@@ -79,6 +79,9 @@ echo -e "\n Removing strict check to avoid '-i' errors"
  find . -type f -exec sed -i 's///g' {} +
  find . -type f -exec sed -i 's///g' {} +
 
+echo -e "\n Installing screen to connect through serial console"
+ sudo apt install screen -y
+
  cd  CHIP-tools 
  FEL='sudo sunxi-fel' FASTBOOT='sudo fastboot' SNIB=false ./chip-update-firmware.sh -$flavour
 fi
