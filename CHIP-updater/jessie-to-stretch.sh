@@ -34,4 +34,6 @@ echo -e "" >> /etc/NetworkManager/NetworkManager.conf
 echo -e "[device]" >> /etc/NetworkManager/NetworkManager.conf
 echo -e "wifi.scan-rand-mac-address=no" >> /etc/NetworkManager/NetworkManager.conf
 
+sudo apt autoremove
+
 echo "*** Update to Stretch finished. Reboot to continue the process. ***"
