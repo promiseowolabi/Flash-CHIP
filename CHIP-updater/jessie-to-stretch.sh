@@ -20,9 +20,10 @@ sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak2
 sudo touch /etc/apt/sources.list
 sudo chmod 666 /etc/apt/sources.list
 
-echo -e "deb http://ftp.us.debian.org/debian/ stretch main contrib non-free\ndeb-src http://ftp.us.debian.org/debian/ stretch main contrib non-free\ndeb http://security.debian.org/ stretch/updates main contrib n
-on-free
-deb-src http://security.debian.org/ stretch/updates main contrib non-free" > /etc/apt/sources.list
+echo -e "deb http://ftp.us.debian.org/debian/ stretch main contrib non-free" >> /etc/apt/sources.list
+echo -e "deb-src http://ftp.us.debian.org/debian/ stretch main contrib non-free" >> /etc/apt/sources.list
+echo -e "deb http://security.debian.org/ stretch/updates main contrib non-free" >> /etc/apt/sources.list
+echo -e "deb-src http://security.debian.org/ stretch/updates main contrib non-free" >> /etc/apt/sources.list
 
 sudo apt update && sudo apt upgrade -y
 
