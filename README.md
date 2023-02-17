@@ -1,20 +1,28 @@
-# Flash-CHIP
-Ready to use Flash environment for the C.H.I.P Single Board Computer
+# Revive an outdated C.H.I.P. from factory OS to Debian Buster
+## Part 1: Flashing stock C.H.I.P. image
 
+Ready to use Flash environment for the C.H.I.P Single Board Computer
 Simplyfies the Flashing Process for the C.H.I.P and PocketC.H.I.P Computer. 
 
 ## Instructions
+### Part 1: Stock image
 1. Remove the C.H.I.P from its case (in case you have a Pocket C.H.I.P).
 2. Connect the FEL and a GROUND pin of the C.H.I.P (for example, with a paperclip).
 3. Connect the C.H.I.P its micro USB port to a USB port of your Linux machine.
 4. In the Linux machine:
-    - run ` git clone https://github.com/thore-krug/Flash-CHIP.git` to clone this repository.
+    - run ` git clone https://github.com/asophila/Flash-CHIP.git` to clone this repository.
     - `cd` into the location where you stored this repository.
     - run `sudo chmod +x Flash.sh`
     - run `./Flash.sh`
     - Select the version you want to install.
     - Wait until the installation finishes.
-    - Enjoy!
+    
+### Part 2: update and upgrade debian jessie (wich is obsolete and archived)
+1. Remove the FEL connection (the paperclip)
+2. Unplug 3 seconds
+3. Plug the C.H.I.P. again
+4. run `sudo nmtui` to set-up a wifi connection
+
   
 ## Troubleshooting 
 ### General Issues
