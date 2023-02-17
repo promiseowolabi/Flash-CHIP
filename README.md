@@ -26,12 +26,7 @@ Simplyfies the Flashing Process for the C.H.I.P and PocketC.H.I.P Computer.
 6. run `sudo nmtui` to set-up a wifi connection to <YOUR SSID>
 7. run `nmcli c` to show your current connections
 8. run `nmcli c m <YOUR SSID> connection.autoconnect yes` to set autoconnection to <YOUR SSID> wifi in case of trouble
-9. run 
-
-
-    
-    
-    
+9. run `curl -o https://raw.githubusercontent.com/asophila/Flash-CHIP/master/CHIP-updater/jessie-to-stretch.sh | bash` to update from Debian Jessie to Debian Stretch
     
     
     
