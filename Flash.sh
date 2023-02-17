@@ -74,6 +74,11 @@ if [ -d CHIP-tools ]; then
  FEL='sudo sunxi-fel' FASTBOOT='sudo fastboot' SNIB=false ./chip-update-firmware.sh -$flavour
  elif [ ! -d CHIP-tools ]; then
  git clone https://github.com/Project-chip-crumbs/CHIP-tools.git
+
+echo -e "\n Removing strict check to avoid '-i' errors"
+ find . -type f -exec sed -i 's///g' {} +
+ find . -type f -exec sed -i 's///g' {} +
+
  cd  CHIP-tools 
  FEL='sudo sunxi-fel' FASTBOOT='sudo fastboot' SNIB=false ./chip-update-firmware.sh -$flavour
 fi
