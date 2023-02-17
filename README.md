@@ -21,8 +21,20 @@ Simplyfies the Flashing Process for the C.H.I.P and PocketC.H.I.P Computer.
 1. Remove the FEL connection (the paperclip)
 2. Unplug 3 seconds
 3. Plug the C.H.I.P. again
-4. run `sudo nmtui` to set-up a wifi connection
+4. Connect to the chip using `sudo screen /dev/ttyACM0`
+5. Use user: chip  and password: chip to connect
+6. run `sudo nmtui` to set-up a wifi connection to <YOUR SSID>
+7. run `nmcli c` to show your current connections
+8. run `nmcli c m <YOUR SSID> connection.autoconnect yes` to set autoconnection to <YOUR SSID> wifi in case of trouble
+9. run 
 
+
+    
+    
+    
+    
+    
+    
   
 ## Troubleshooting 
 ### General Issues
