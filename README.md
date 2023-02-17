@@ -26,5 +26,5 @@ This guide and scripts are based on the excelent work made by https://github.com
     
 ### Part 3: upgrade debian jessie to debian stretch
 1. run `sudo su -` to allow all the next changes as superuser
-2. run `curl -o https://raw.githubusercontent.com/asophila/Flash-CHIP/master/CHIP-updater/jessie-to-stretch.sh | bash` to update from Debian Jessie to Debian Stretch
+2. run `bash <(curl -s https://raw.githubusercontent.com/asophila/Flash-CHIP/master/CHIP-updater/jessie-to-stretch.sh)` to update from Debian Jessie to Debian Stretch
 3. reboot C.H.I.P. into Debian Stretch
