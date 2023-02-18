@@ -3,9 +3,9 @@
 # Upgrade jessie
 echo "."
 echo "*** Updating and upgrading Debian Jessie. ***"
-sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak
-sudo touch /etc/apt/sources.list
-sudo chmod 666 /etc/apt/sources.list
+mv /etc/apt/sources.list /etc/apt/sources.list.bak
+touch /etc/apt/sources.list
+chmod 666 /etc/apt/sources.list
 echo -e "deb [check-valid-until=no] http://archive.debian.org/debian/ jessie main contrib non-free" >> /etc/apt/sources.list
 echo -e "deb-src [check-valid-until=no] http://archive.debian.org/debian/ jessie main contrib non-free" >> /etc/apt/sources.list
 echo -e "deb [check-valid-until=no] http://archive.debian.org/ jessie/updates main contrib non-free" >> /etc/apt/sources.list
