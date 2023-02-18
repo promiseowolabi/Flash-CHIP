@@ -15,11 +15,11 @@ echo -e "deb http://chip.jfpossibilities.com/chip/debian/pocketchip jessie main"
 
 echo "."
 echo "*** Installing debian keyring. ***"
-sudo apt install debian-keyring debian-archive-keyring -y --force-yes
+sudo apt-get install debian-keyring debian-archive-keyring -y --force-yes
 
 echo "."
 echo "*** apt update & upgrade ***"
-sudo apt update && sudo apt upgrade -y
+sudo apt-get update && sudo apt upgrade -y
 
 # Upgrade from jessie to stretch 
 echo "."
@@ -35,7 +35,7 @@ echo -e "deb-src http://security.debian.org/ stretch/updates main contrib non-fr
 
 echo "."
 echo "*** apt update & upgrade ***"
-sudo apt update && sudo apt upgrade -y
+sudo apt-get update && sudo apt upgrade -y
 
 sudo chmod 666 /etc/NetworkManager/NetworkManager.conf
 echo -e "[connection]" >> /etc/NetworkManager/NetworkManager.conf
