@@ -15,6 +15,7 @@ echo -e "deb http://chip.jfpossibilities.com/chip/debian/pocketchip jessie main"
 
 echo "."
 echo "*** Installing debian keyring. ***"
+apt-get update
 apt-get install debian-keyring debian-archive-keyring -y --force-yes
 sleep 5
 
