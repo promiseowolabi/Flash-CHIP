@@ -16,10 +16,12 @@ echo -e "deb http://chip.jfpossibilities.com/chip/debian/pocketchip jessie main"
 echo "."
 echo "*** Installing debian keyring. ***"
 sudo apt-get install debian-keyring debian-archive-keyring -y --force-yes
+sleep 5
 
 echo "."
 echo "*** apt update & upgrade ***"
 sudo apt-get update && sudo apt upgrade -y
+sleep 5
 
 # Upgrade from jessie to stretch 
 echo "."
@@ -36,6 +38,7 @@ echo -e "deb-src http://security.debian.org/ stretch/updates main contrib non-fr
 echo "."
 echo "*** apt update & upgrade ***"
 sudo apt-get update && sudo apt upgrade -y
+sleep 5
 
 sudo chmod 666 /etc/NetworkManager/NetworkManager.conf
 echo -e "[connection]" >> /etc/NetworkManager/NetworkManager.conf
@@ -44,4 +47,5 @@ echo -e "" >> /etc/NetworkManager/NetworkManager.conf
 echo -e "[device]" >> /etc/NetworkManager/NetworkManager.conf
 echo -e "wifi.scan-rand-mac-address=no" >> /etc/NetworkManager/NetworkManager.conf
 
+echo "."
 echo "*** Update to Stretch finished. Reboot to continue the process. ***"
