@@ -11,7 +11,7 @@ echo -e "deb-src [check-valid-until=no] http://archive.debian.org/ jessie/update
 echo -e "deb http://chip.jfpossibilities.com/chip/debian/repo jessie main" >> /etc/apt/sources.list
 echo -e "deb http://chip.jfpossibilities.com/chip/debian/pocketchip jessie main" >> /etc/apt/sources.list
 
-apt install debian-keyring debian-archive-keyring -y --force-yes
+sudo apt install debian-keyring debian-archive-keyring -y --force-yes
 
 sudo apt update && sudo apt upgrade -y
 
@@ -34,6 +34,6 @@ echo -e "" >> /etc/NetworkManager/NetworkManager.conf
 echo -e "[device]" >> /etc/NetworkManager/NetworkManager.conf
 echo -e "wifi.scan-rand-mac-address=no" >> /etc/NetworkManager/NetworkManager.conf
 
-sudo apt autoremove
+sudo apt autoremove -y --force-yes
 
 echo "*** Update to Stretch finished. Reboot to continue the process. ***"
