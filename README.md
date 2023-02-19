@@ -14,7 +14,7 @@ This guide and scripts are based on the excelent work made by https://github.com
     - Select the version you want to install
     - Wait until the installation finishes
     
-### Part 2: update and upgrade debian jessie (wich is obsolete and archived)
+### Part 2: Get jessie to connect to the network
 1. Remove the FEL connection (the paperclip)
 2. Unplug 3 seconds
 3. Plug the C.H.I.P. again
@@ -23,6 +23,7 @@ This guide and scripts are based on the excelent work made by https://github.com
 6. run `sudo nmtui` to set-up a wifi connection to <YOUR SSID>
 7. run `sudo nmcli c` to show your current connections
 8. run `sudo nmcli c m <YOUR SSID> connection.autoconnect yes` to set autoconnection to <YOUR SSID> wifi in case of trouble
+9. use `ip address` to get your <CHIP ID>. From your linux computer open other terminal and connect using `ssh chip@<CHIP IP>`. You can close the terminal running `screen`.
     
 ### Part 3: upgrade debian jessie to debian stretch
 1. run `sudo su -` to allow all the next changes as superuser
