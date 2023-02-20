@@ -27,7 +27,7 @@ mv stretch_source_list.txt /etc/apt/sources.list
 
 echo "."
 echo "*** apt update & upgrade ***"
-apt-get update && apt-get upgrade -y
+apt-get update && apt-get full-upgrade -y
 sleep 5
 
 # Define network variables
