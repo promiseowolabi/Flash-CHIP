@@ -29,3 +29,9 @@ This guide and scripts are based on the excelent work made by https://github.com
 1. run `sudo su -` to allow all the next changes as superuser
 2. run `bash <(curl -s https://raw.githubusercontent.com/asophila/Flash-CHIP/master/CHIP-updater/jessie-to-stretch.sh)` to update from Debian Jessie to Debian Stretch
 3. reboot C.H.I.P. into Debian Stretch
+                    
+### Part 4: upgrade debian stretch to debian buster
+1. From your linux computer open other terminal and connect using `ssh chip@<CHIP IP>`.
+1. run `sudo su -` to allow all the next changes as superuser
+2. run `bash <(curl -s https://raw.githubusercontent.com/asophila/Flash-CHIP/master/CHIP-updater/stretch-to-buster.sh)` to update from Debian Stretch to Debian Buster
+3. reboot C.H.I.P. into Debian Stretch**
