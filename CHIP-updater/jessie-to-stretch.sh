@@ -15,7 +15,8 @@ sleep 5
 
 echo "."
 echo "*** apt update & upgrade ***"
-apt-get update && apt-get upgrade -y
+apt-get update
+apt-get upgrade -y
 sleep 5
 
 # Upgrade from jessie to stretch 
@@ -27,7 +28,8 @@ mv stretch_source_list.txt /etc/apt/sources.list
 
 echo "."
 echo "*** apt update & upgrade ***"
-apt-get update && apt-get full-upgrade -y
+apt-get update
+apt-get full-upgrade
 sleep 5
 
 # Define network variables
