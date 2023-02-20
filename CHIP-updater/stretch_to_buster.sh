@@ -9,7 +9,8 @@ mv buster_source_list.txt /etc/apt/sources.list
 
 echo "."
 echo "*** apt update & upgrade ***"
-apt-get update && apt-get full-upgrade -y
+apt-get update
+apt-get full-upgrade
 sleep 5
 
 
