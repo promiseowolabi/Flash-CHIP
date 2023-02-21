@@ -9,9 +9,9 @@ mv buster_source_list.txt /etc/apt/sources.list
 
 echo "."
 echo "*** apt update & upgrade ***"
-apt-get update
-apt-get install linux-image-armmp
-apt-get full-upgrade
+apt update
+apt install linux-image-armmp -y --force-yes
+apt full-upgrade -y --force-yes
 sleep 5
 
 
@@ -20,5 +20,6 @@ sudo mv /etc/X11/xorg.conf /etc/X11/xorg.conf.bak
 wget https://raw.githubusercontent.com/asophila/Flash-CHIP/master/CHIP-updater/buster_x11.txt
 mv buster_x11.txt /etc/X11/xorg.conf
 
+apt autoremove -y --force-yes
 echo "."
-echo "*** Update to Stretch finished. Reboot***"
+echo "*** Update to Buster finished. Reboot***"

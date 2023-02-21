@@ -11,14 +11,14 @@ mv jessie_source_list.txt /etc/apt/sources.list
 
 echo "."
 echo "*** Installing debian keyring. ***"
-apt-get update
-apt-get install debian-keyring debian-archive-keyring -y --force-yes
+apt update
+apt install debian-keyring debian-archive-keyring -y
 sleep 5
 
 echo "."
 echo "*** apt update & upgrade ***"
-apt-get update
-apt-get upgrade -y
+apt update
+apt upgrade -y
 sleep 5
 
 # Upgrade from jessie to stretch 
@@ -30,8 +30,9 @@ mv stretch_source_list.txt /etc/apt/sources.list
 
 echo "."
 echo "*** apt update & upgrade ***"
-apt-get update
-apt-get full-upgrade
+apt update
+apt install linux-image-armmp -y 
+apt full-upgrade -y
 sleep 5
 
 # Define network variables
@@ -47,5 +48,7 @@ sudo mv /etc/X11/xorg.conf /etc/X11/xorg.conf.bak
 wget https://raw.githubusercontent.com/asophila/Flash-CHIP/master/CHIP-updater/stretch_x11.txt
 mv stretch_x11.txt /etc/X11/xorg.conf
 
+wget https://raw.githubusercontent.com/asophila/Flash-CHIP/master/CHIP-updater/stretch-to-buster.sh
+chmod +x stretch-to-buster.sh
 echo "."
 echo "*** Update to Stretch finished. Reboot to continue the process. ***"
