@@ -2,10 +2,12 @@
 
 # Upgrade from stretch to buster
 echo "."
-echo "*** Updating and upgrading Debian Jessie. ***"
+echo "*** Updating and upgrading Debian Stretch to Buster. ***"
 mv /etc/apt/sources.list /etc/apt/sources.list.bak
 wget https://raw.githubusercontent.com/asophila/Flash-CHIP/master/CHIP-updater/buster_source_list.txt
 mv buster_source_list.txt /etc/apt/sources.list
+
+apt-get install linux-image-armmp
 
 echo "."
 echo "*** apt update & upgrade ***"
@@ -20,4 +22,4 @@ wget https://raw.githubusercontent.com/asophila/Flash-CHIP/master/CHIP-updater/b
 mv buster_x11.txt /etc/X11/xorg.conf
 
 echo "."
-echo "*** Update to Stretch finished. Reboot to continue the process. ***"
+echo "*** Update to Stretch finished. Reboot***"
