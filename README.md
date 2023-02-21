@@ -20,10 +20,10 @@ This guide and scripts are based on the excelent work made by https://github.com
 3. Plug the C.H.I.P. again
 4. Connect to the chip using `sudo screen /dev/ttyACM0`
 5. Use user: chip  and password: chip to connect
-6. run `sudo nmtui` to set-up a wifi connection to <YOUR SSID>
+6. run `sudo nmtui` to set-up a wifi connection to YOUR_SSID
 7. run `sudo nmcli c` to show your current connections
-8. run `sudo nmcli c m <YOUR SSID> connection.autoconnect yes` to set autoconnection to <YOUR SSID> wifi in case of trouble
-9. use `ip addr | grep "inet " | awk 'NR==2{print $2}' | cut -d/ -f1 ` to get your '<CHIP IP>'. From your linux computer open other terminal and connect using `ssh chip@<CHIP IP>`. You can close the terminal running `screen`.
+8. run `sudo nmcli c m <YOUR SSID> connection.autoconnect yes` to set autoconnection to YOUR_SSID wifi in case of trouble
+9. use `ip addr | grep "inet " | awk 'NR==2{print $2}' | cut -d/ -f1 ` to get your CHIP_IP. From your linux computer open other terminal and connect using `ssh chip@CHIP_IP`. You can close the terminal running `screen`.
     
 ### Part 3: upgrade debian jessie to debian stretch
 1. run `sudo su -` to allow all the next changes as superuser
