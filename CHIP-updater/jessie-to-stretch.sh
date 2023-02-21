@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mv /etc/rc.local.orig /etc/rc.local
+
 # Upgrade jessie
 echo "."
 echo "*** Updating and upgrading Debian Jessie. ***"
