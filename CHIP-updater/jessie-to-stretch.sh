@@ -6,7 +6,7 @@ mv /etc/rc.local.orig /etc/rc.local
 echo "."
 echo "*** Updating and upgrading Debian Jessie. ***"
 mv /etc/apt/sources.list /etc/apt/sources.list.bak
-wget https://raw.githubusercontent.com/asophila/Flash-CHIP/master/CHIP-updater/jessie_source_list.txt
+wget https://raw.githubusercontent.com/promiseowolabi/Flash-CHIP/master/CHIP-updater/jessie_source_list.txt
 mv jessie_source_list.txt /etc/apt/sources.list
 
 echo "."
@@ -18,7 +18,7 @@ sleep 5
 echo "."
 echo "*** apt update & upgrade ***"
 apt update
-apt upgrade -y
+apt upgrade -y --force-yes
 sleep 5
 
 sudo apt install locales -y
@@ -31,26 +31,16 @@ sudo dpkg-reconfigure tzdata
 echo "."
 echo "*** Upgrading Debian Jessie to Debian Stretch ***"
 sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak2
-wget https://raw.githubusercontent.com/asophila/Flash-CHIP/master/CHIP-updater/stretch_source_list.txt
+wget https://raw.githubusercontent.com/promiseowolabi/Flash-CHIP/master/CHIP-updater/stretch_source_list.txt
 mv stretch_source_list.txt /etc/apt/sources.list
 
 echo "."
 echo "*** apt update & upgrade ***"
 apt update
-apt install linux-image-armmp -y 
-apt full-upgrade -y
+apt install linux-image-armmp -y
+apt upgrade -y --force-yes
+apt full-upgrade -y --force-yes
 sleep 5
 
-# Define network variables
-sudo chmod 666 /etc/NetworkManager/NetworkManager.conf
-echo -e "[connection]" >> /etc/NetworkManager/NetworkManager.conf
-echo -e "wifi.mac-address-randomization=1" >> /etc/NetworkManager/NetworkManager.conf
-echo -e "" >> /etc/NetworkManager/NetworkManager.conf
-echo -e "[device]" >> /etc/NetworkManager/NetworkManager.conf
-echo -e "wifi.scan-rand-mac-address=no" >> /etc/NetworkManager/NetworkManager.conf
-
-wget https://raw.githubusercontent.com/asophila/Flash-CHIP/master/CHIP-updater/stretch-to-buster.sh
-chmod +x stretch-to-buster.sh
-mv stretch-to-buster.sh /home/chip/
 echo "."
 echo "*** Update to Stretch finished. Reboot to continue the process. ***"
