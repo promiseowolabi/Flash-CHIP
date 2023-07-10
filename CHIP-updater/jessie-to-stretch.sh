@@ -38,7 +38,12 @@ echo "."
 echo "*** apt update & upgrade ***"
 apt update
 apt install linux-image-armmp -y
-apt full-upgrade -y --force-yes
+DEBIAN_FRONTEND=noninteractive \
+apt-get \
+-o Dpkg::Options::="--force-confnew" \
+--force-yes \
+-fuy \
+full-upgrade -y --force-yes
 sleep 5
 
 echo "."
