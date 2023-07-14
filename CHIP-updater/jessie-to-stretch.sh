@@ -37,7 +37,7 @@ mv stretch_source_list.txt /etc/apt/sources.list
 echo "."
 echo "*** apt update & upgrade ***"
 apt update
-apt install -y --force-yes linux-image-armmp
+# apt install -y --force-yes linux-image-armmp
 DEBIAN_FRONTEND=noninteractive \
   apt-get \
   -o Dpkg::Options::=--force-confold \
