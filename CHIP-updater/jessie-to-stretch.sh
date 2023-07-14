@@ -39,10 +39,10 @@ echo "*** apt update & upgrade ***"
 apt update
 # apt install -y --force-yes linux-image-armmp
 DEBIAN_FRONTEND=noninteractive \
-  apt-get \
+  apt \
   -o Dpkg::Options::=--force-confold \
   -o Dpkg::Options::=--force-confdef \
-  -y --force-yes full-upgrade 
+  --allow-change-held-packages -y full-upgrade 
   # -y --allow-downgrades --allow-remove-essential --allow-change-held-packages \
   #full-upgrade 
 
