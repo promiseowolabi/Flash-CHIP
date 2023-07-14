@@ -10,8 +10,12 @@ mv buster_source_list.txt /etc/apt/sources.list
 echo "."
 echo "*** apt update & upgrade ***"
 apt update
-apt install linux-image-armmp -y --force-yes
-apt full-upgrade -y --force-yes
+# apt install linux-image-armmp -y --force-yes
+DEBIAN_FRONTEND=noninteractive \
+  apt \
+  -o Dpkg::Options::=--force-confold \
+  -o Dpkg::Options::=--force-confdef -y --force-yes full-upgrade
+  
 sleep 5
 
 apt autoremove -y --force-yes
