@@ -42,7 +42,7 @@ DEBIAN_FRONTEND=noninteractive \
   apt \
   -o Dpkg::Options::=--force-confold \
   -o Dpkg::Options::=--force-confdef \
-  --allow-change-held-packages full-upgrade 
+  -y --force-yes full-upgrade 
   # -y --allow-downgrades --allow-remove-essential --allow-change-held-packages \
   #full-upgrade 
 
